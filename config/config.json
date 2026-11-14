@@ -1,0 +1,47 @@
+{
+  "configVersion": 1,
+  "web": {
+    "enabled": true,
+    "host": "127.0.0.1",
+    "port": 5088,
+    "basePath": "/flow",
+    "trustedOrigins": [],
+    "requireAuth": false
+  },
+  "host": {
+    "adapter": "trss-yunzai",
+    "redis": "reuse-host",
+    "renderer": "prefer-host"
+  },
+  "storage": {
+    "driver": "sqlite",
+    "database": "data/flow.sqlite",
+    "resources": "data/resources"
+  },
+  "runtime": {
+    "maxActiveRuns": 8,
+    "maxActivePerConversation": 1,
+    "queueLimit": 100,
+    "runTimeoutMs": 60000,
+    "nodeTimeoutMs": 10000,
+    "maxIterations": 1000,
+    "defaultMaxAttempts": 1
+  },
+  "napcat": {
+    "schemaVersion": "4.18.42",
+    "connectionMode": "host-first",
+    "allowFallbackConnection": false,
+    "httpUrl": "",
+    "wsUrl": "",
+    "accessToken": ""
+  },
+  "code": {
+    "mode": "owner-trusted-process",
+    "unreviewedImports": "disabled",
+    "timeoutMs": 3000
+  },
+  "retention": {
+    "runDays": 7,
+    "persistMessageBody": false
+  }
+}

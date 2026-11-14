@@ -1,0 +1,34 @@
+{
+  "specVersion": "1.0",
+  "id": "demo.user-profile",
+  "version": "1.0.0",
+  "title": "示例用户服务",
+  "connection": { "baseUrl": "https://api.example.com", "authProfile": "bearer", "secretAlias": "demo_api_key" },
+  "operations": [
+    {
+      "id": "getProfile",
+      "title": "获取资料",
+      "inputSchema": { "type": "object", "properties": { "uid": { "type": "string", "minLength": 1 } }, "required": ["uid"], "additionalProperties": false },
+      "outputSchema": { "type": "object", "properties": { "name": { "type": "string" }, "level": { "type": "number" } }, "required": ["name"] },
+      "request": { "method": "GET", "path": "/v1/profile", "query": { "uid": { "source": "input", "pointer": "/uid" } } },
+      "response": { "success": { "httpStatus": [200] }, "mapping": { "/name": { "source": "response", "pointer": "/body/data/name" }, "/level": { "source": "response", "pointer": "/body/data/level" } } },
+      "pagination": { "mode": "none" },
+      "cache": { "ttlSeconds": 60, "scope": "user" },
+      "rateLimit": { "requests": 1, "perMilliseconds": 1000 },
+      "effect": "read",
+      "requiredCapabilities": ["datasource:demo.user-profile:read"],
+      "tool": { "enabled": true, "name": "demo_get_profile" }
+    },
+    {
+      "id": "setNick",
+      "title": "修改昵称",
+      "inputSchema": { "type": "object", "properties": { "uid": { "type": "string" }, "nick": { "type": "string" } }, "required": ["uid", "nick"] },
+      "outputSchema": { "type": "object", "properties": { "ok": { "type": "boolean" } } },
+      "request": { "method": "POST", "path": "/v1/nick" },
+      "response": { "success": { "httpStatus": [200] }, "mapping": { "/ok": { "source": "response", "pointer": "/body/ok" } } },
+      "effect": "write",
+      "requiredCapabilities": ["datasource:demo.user-profile:write"],
+      "tool": { "enabled": true, "name": "demo_set_nick" }
+    }
+  ]
+}

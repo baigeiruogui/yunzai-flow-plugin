@@ -1,0 +1,21 @@
+{
+  "specVersion": "1.0",
+  "id": "demo.weather",
+  "version": "1.0.0",
+  "title": "示例天气服务",
+  "connection": { "baseUrl": "https://api.weather.example" },
+  "operations": [
+    {
+      "id": "getWeather",
+      "title": "查询天气",
+      "inputSchema": { "type": "object", "properties": { "city": { "type": "string", "minLength": 1 } }, "required": ["city"], "additionalProperties": false },
+      "outputSchema": { "type": "object", "properties": { "city": { "type": "string" }, "weather": { "type": "string" }, "temp": { "type": "number" } }, "required": ["weather"] },
+      "request": { "method": "GET", "path": "/v1/weather", "query": { "city": { "source": "input", "pointer": "/city" } } },
+      "response": { "success": { "httpStatus": [200] }, "mapping": { "/city": { "source": "response", "pointer": "/body/data/city" }, "/weather": { "source": "response", "pointer": "/body/data/weather" }, "/temp": { "source": "response", "pointer": "/body/data/temp" } } },
+      "cache": { "ttlSeconds": 120, "scope": "user" },
+      "effect": "read",
+      "requiredCapabilities": ["datasource:demo.weather:read"],
+      "tool": { "enabled": true, "name": "demo_get_weather" }
+    }
+  ]
+}

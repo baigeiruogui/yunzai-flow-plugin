@@ -1,0 +1,23 @@
+{
+  "name": "yunzai-flow-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "云崽可视化工作流插件 (MVP) — ComfyUI-like node canvas for Yunzai/QQ bots. Implements the M0/M1 vertical slice from the v1.0 dev spec.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test",
+    "check": "node --test && node scripts/api-smoke.mjs && node scripts/ui-smoke.mjs && node scripts/ui-smoke-mobile.mjs",
+    "generate:napcat": "node scripts/generate-napcat.mjs",
+    "verify": "node scripts/verify.mjs",
+    "generate:forms": "node scripts/gen-forms-from-source.mjs",
+    "smoke:ui": "node scripts/ui-smoke.mjs",
+    "smoke:api": "node scripts/api-smoke.mjs",
+    "smoke:mobile": "node scripts/ui-smoke-mobile.mjs"
+  },
+  "dependencies": {}
+}

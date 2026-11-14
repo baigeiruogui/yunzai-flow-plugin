@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>云崽 Flow · 可视化工作流</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- ============ 顶栏：品牌 / 流程页签 / 运行模式+运行按钮 / 工具栏 / 宿主信息 ============ -->
+    <header class="topbar">
+      <div class="tb-main">
+        <button class="btn mob-only" id="btnPalette" title="节点库">☰</button>
+        <div class="brand"><span class="logo">🪢</span><div class="brand-t">云崽 Flow<span class="brand-s"> · 可视化工作流 MVP</span></div></div>
+        <div class="wf-tabs" id="wfTabs"></div>
+        <div class="spacer"></div>
+        <div class="actions primary-actions">
+          <select id="modeSel" class="mode" title="运行模式"><option value="simulate">模拟</option><option value="real">真实(模拟QQ)</option></select>
+          <button class="btn primary" id="btnRun" title="运行流程">▶ 运行</button>
+        </div>
+      </div>
+      <div class="tb-sub">
+        <div class="actions">
+          <button class="btn" id="btnNew" title="新建流程">＋新建</button>
+          <button class="btn" id="btnUndo" title="撤销 Ctrl+Z">↶ 撤销</button>
+          <button class="btn" id="btnRedo" title="重做 Ctrl+Shift+Z">↷ 重做</button>
+          <span class="tb-sep"></span>
+          <button class="btn" id="btnValidate" title="编译校验">校验</button>
+          <button class="btn" id="btnSave" title="保存草稿">保存</button>
+          <button class="btn" id="btnPublish" title="发布版本">发布</button>
+          <span class="tb-sep"></span>
+          <button class="btn" id="btnExport" title="导出当前流程包(无凭据)">导出</button>
+          <button class="btn" id="btnImport" title="导入流程包">导入</button>
+          <button class="btn" id="btnBackup" title="下载全量备份">备份</button>
+          <span class="tb-sep"></span>
+          <button class="btn" id="btnGroup" title="把选中节点分组">▦分组</button>
+          <button class="btn" id="btnCatalog" title="节点帮助目录">帮助</button>
+          <button class="btn" id="btnCoverage" title="覆盖率报告">覆盖</button>
+        </div>
+        <div class="spacer"></div>
+        <div class="meta" id="meta"></div>
+      </div>
+    </header>
+
+    <div class="body">
+      <!-- ============ 左侧：节点库（搜索框 + 家族/操作列表 + 底部统计） ============ -->
+      <aside class="palette">
+        <div class="pal-head">
+          <input id="search" placeholder="搜索节点 / 家族…" />
+        </div>
+        <div class="pal-list" id="palList"></div>
+        <div class="pal-foot" id="palFoot"></div>
+      </aside>
+
+      <!-- ============ 中间：画布（网格 → 缩放平移舞台[连线/分组/节点] → 缩放HUD → 操作提示） ============ -->
+      <main class="canvas-wrap" id="canvasWrap">
+        <div class="grid" id="grid"></div>
+        <div class="stage" id="stage">
+          <svg class="edges" id="edges"></svg>
+          <div class="groups-layer" id="groups"></div>
+          <div class="nodes" id="nodes"></div>
+        </div>
+        <div class="canvas-hud">
+          <button class="hud-btn" id="zoomOut">−</button>
+          <span id="zoomLabel">100%</span>
+          <button class="hud-btn" id="zoomIn">+</button>
+          <button class="hud-btn" id="fitView">适应</button>
+        </div>
+        <div class="hint" id="hint">拖拽节点 · 点输出端口→点输入端口连线 · 滚轮缩放 · 拖空白平移</div>
+      </main>
+
+      <!-- ============ 右侧：检查器（选中节点后显示参数 / 数据绑定 / 输出 / 帮助） ============ -->
+      <aside class="inspector" id="inspector">
+        <div class="insp-empty" id="inspEmpty">选择一个节点查看参数</div>
+        <div class="insp-body" id="inspBody" hidden></div>
+      </aside>
+    </div>
+
+    <!-- ============ 底部：运行面板（状态/传输徽标/测试事件 + 节点轨迹/历史/日志三栏） ============ -->
+    <section class="runpanel" id="runpanel">
+      <div class="run-head" id="runHead">
+        <span class="run-title">运行面板</span>
+        <span class="run-status" id="runStatus">未运行</span>
+        <span class="badge" id="tpBadge" title="当前传输">模拟</span>
+        <div class="spacer"></div>
+        <div class="run-opts">
+          <label>测试事件文本 <input id="evtText" class="evt" value="/你好" /></label>
+          <label>发送者昵称 <input id="evtNick" class="evt-sm" value="小明" /></label>
+        </div>
+        <button class="chev" id="chev">▴</button>
+      </div>
+      <div class="run-body" id="runBody">
+        <div class="run-cols">
+          <div class="run-col">
+            <div class="col-title">节点轨迹</div>
+            <div id="trace" class="trace"></div>
+          </div>
+          <div class="run-col">
+            <div class="col-title">历史运行</div>
+            <div id="history" class="trace"></div>
+          </div>
+          <div class="run-col">
+            <div class="col-title">日志 / 回执 / 副作用</div>
+            <div id="logs" class="logs"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 通用弹窗（覆盖报告 / 导入 / 节点目录 / 传输配置等复用此容器） ============ -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head"><span id="modalTitle">覆盖率报告</span><button class="x" id="modalX">✕</button></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ 首次引导浮层（localStorage 记住已看过） ============ -->
+  <div class="onboard" id="onboard" hidden>
+    <div class="onboard-card">
+      <div class="onboard-h"><span class="logo">🪢</span><b>欢迎使用 云崽 Flow</b><button class="x" id="obX">✕</button></div>
+      <div class="onboard-b">
+        <p>拖节点、连端口、点运行，就能编排 QQ 机器人流程。三步上手：</p>
+        <ol>
+          <li>左侧「节点库」点选节点加入画布</li>
+          <li>在右侧「检查器」配参数、点「选择来源」绑定上游数据</li>
+          <li>底部选「模拟」点「▶ 运行」看轨迹，成功后「发布」</li>
+        </ol>
+        <div class="onboard-tip">试试默认流程「群欢迎」：测试事件填 <code>/你好</code> → 运行，看到回执即成功。</div>
+        <button class="btn primary" id="obGo">开始编辑</button>
+      </div>
+    </div>
+  </div>
+  <!-- ============ 全局 toast 提示（app.js 复用） ============ -->
+  <div id="toast" class="toast" hidden></div>
+
+  <!-- 前端入口：编辑器全部逻辑在 app.js（原生 JS 单文件） -->
+  <script src="/app.js"></script>
+</body>
+</html>

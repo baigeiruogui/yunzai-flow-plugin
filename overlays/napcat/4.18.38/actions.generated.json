@@ -1,0 +1,6682 @@
+{
+  "sourceVersion": "4.18.38",
+  "generatedFrom": "NapCatQQ@bbd0d2ac TypeBox PayloadSchema",
+  "count": 147,
+  "actions": [
+    {
+      "action": "bot_exit",
+      "title": "bot_exit",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:bot_exit"
+      ]
+    },
+    {
+      "action": "click_inline_keyboard_button",
+      "title": "click_inline_keyboard_button",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "bot_appid": {
+            "type": "string",
+            "description": "机器人AppID"
+          },
+          "button_id": {
+            "type": "string",
+            "description": "按钮ID"
+          },
+          "callback_data": {
+            "type": "string",
+            "description": "回调数据"
+          },
+          "msg_seq": {
+            "type": "string",
+            "description": "消息序列号"
+          }
+        },
+        "required": [
+          "group_id",
+          "bot_appid",
+          "button_id",
+          "callback_data",
+          "msg_seq"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/bot_appid",
+            "label": "机器人AppID",
+            "type": "text"
+          },
+          {
+            "path": "/button_id",
+            "label": "按钮ID",
+            "type": "text"
+          },
+          {
+            "path": "/callback_data",
+            "label": "回调数据",
+            "type": "text"
+          },
+          {
+            "path": "/msg_seq",
+            "label": "消息序列号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:click_inline_keyboard_button"
+      ]
+    },
+    {
+      "action": "create_collection",
+      "title": "create_collection",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rawData": {
+            "type": "string",
+            "description": "原始数据"
+          },
+          "brief": {
+            "type": "string",
+            "description": "简要描述"
+          }
+        },
+        "required": [
+          "rawData",
+          "brief"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/rawData",
+            "label": "原始数据",
+            "type": "text"
+          },
+          {
+            "path": "/brief",
+            "label": "简要描述",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:create_collection"
+      ]
+    },
+    {
+      "action": "fetch_custom_face_detail",
+      "title": "fetch_custom_face_detail",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "string",
+            "description": "获取数量"
+          }
+        },
+        "required": [
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/count",
+            "label": "获取数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:fetch_custom_face_detail"
+      ]
+    },
+    {
+      "action": "del_group_album_media",
+      "title": "del_group_album_media",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "album_id": {
+            "type": "string",
+            "description": "相册ID"
+          },
+          "lloc": {
+            "type": "string",
+            "description": "媒体ID (lloc)"
+          }
+        },
+        "required": [
+          "group_id",
+          "album_id",
+          "lloc"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/album_id",
+            "label": "相册ID",
+            "type": "text"
+          },
+          {
+            "path": "/lloc",
+            "label": "媒体ID (lloc)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:del_group_album_media"
+      ]
+    },
+    {
+      "action": "delete_qzone_msg",
+      "title": "delete_qzone_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tid": {
+            "type": "string",
+            "description": "说说 tid (来自 get_qzone_msg_list / send_qzone_msg)"
+          }
+        },
+        "required": [
+          "tid"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/tid",
+            "label": "说说 tid (来自 get_qzone_msg_list / send_qzone_msg)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:delete_qzone_msg"
+      ]
+    },
+    {
+      "action": "do_group_album_comment",
+      "title": "do_group_album_comment",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "album_id": {
+            "type": "string",
+            "description": "相册 ID"
+          },
+          "lloc": {
+            "type": "string",
+            "description": "图片 ID"
+          },
+          "content": {
+            "type": "string",
+            "description": "评论内容"
+          }
+        },
+        "required": [
+          "group_id",
+          "album_id",
+          "lloc",
+          "content"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/album_id",
+            "label": "相册 ID",
+            "type": "text"
+          },
+          {
+            "path": "/lloc",
+            "label": "图片 ID",
+            "type": "text"
+          },
+          {
+            "path": "/content",
+            "label": "评论内容",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:do_group_album_comment"
+      ]
+    },
+    {
+      "action": "fetch_custom_face",
+      "title": "fetch_custom_face",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "string",
+            "description": "获取数量"
+          }
+        },
+        "required": [
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/count",
+            "label": "获取数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:fetch_custom_face"
+      ]
+    },
+    {
+      "action": "fetch_emoji_like",
+      "title": "fetch_emoji_like",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          },
+          "emojiId": {
+            "type": "string",
+            "description": "表情ID"
+          },
+          "emojiType": {
+            "type": "string",
+            "description": "表情类型"
+          },
+          "count": {
+            "type": "string",
+            "description": "获取数量"
+          },
+          "cookie": {
+            "type": "string",
+            "description": "分页Cookie"
+          }
+        },
+        "required": [
+          "message_id",
+          "emojiId",
+          "emojiType",
+          "count",
+          "cookie"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          },
+          {
+            "path": "/emojiId",
+            "label": "表情ID",
+            "type": "text"
+          },
+          {
+            "path": "/emojiType",
+            "label": "表情类型",
+            "type": "text"
+          },
+          {
+            "path": "/count",
+            "label": "获取数量",
+            "type": "text"
+          },
+          {
+            "path": "/cookie",
+            "label": "分页Cookie",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:fetch_emoji_like"
+      ]
+    },
+    {
+      "action": "get_ai_characters",
+      "title": "get_ai_characters",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "chat_type": {
+            "type": "string",
+            "description": "聊天类型"
+          }
+        },
+        "required": [
+          "group_id",
+          "chat_type"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/chat_type",
+            "label": "聊天类型",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_ai_characters"
+      ]
+    },
+    {
+      "action": "get_clientkey",
+      "title": "get_clientkey",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_clientkey"
+      ]
+    },
+    {
+      "action": "get_collection_list",
+      "title": "get_collection_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "分类ID"
+          },
+          "count": {
+            "type": "string",
+            "description": "获取数量"
+          }
+        },
+        "required": [
+          "category",
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/category",
+            "label": "分类ID",
+            "type": "text"
+          },
+          {
+            "path": "/count",
+            "label": "获取数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_collection_list"
+      ]
+    },
+    {
+      "action": "get_emoji_likes",
+      "title": "get_emoji_likes",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号，短ID可不传"
+          },
+          "message_id": {
+            "type": "string",
+            "description": "消息ID，可以传递长ID或短ID"
+          },
+          "emoji_id": {
+            "type": "string",
+            "description": "表情ID"
+          },
+          "emoji_type": {
+            "type": "string",
+            "description": "表情类型"
+          },
+          "count": {
+            "type": "number",
+            "description": "数量，0代表全部"
+          }
+        },
+        "required": [
+          "message_id",
+          "emoji_id",
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号，短ID可不传",
+            "type": "text"
+          },
+          {
+            "path": "/message_id",
+            "label": "消息ID，可以传递长ID或短ID",
+            "type": "text"
+          },
+          {
+            "path": "/emoji_id",
+            "label": "表情ID",
+            "type": "text"
+          },
+          {
+            "path": "/emoji_type",
+            "label": "表情类型",
+            "type": "text"
+          },
+          {
+            "path": "/count",
+            "label": "数量，0代表全部",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_emoji_likes"
+      ]
+    },
+    {
+      "action": "get_friends_with_category",
+      "title": "get_friends_with_category",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_friends_with_category"
+      ]
+    },
+    {
+      "action": "get_group_ignore_add_request",
+      "title": "get_group_ignore_add_request",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_ignore_add_request"
+      ]
+    },
+    {
+      "action": "get_group_album_media_list",
+      "title": "get_group_album_media_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "album_id": {
+            "type": "string",
+            "description": "相册ID"
+          },
+          "attach_info": {
+            "type": "string",
+            "description": "附加信息（用于分页）"
+          }
+        },
+        "required": [
+          "group_id",
+          "album_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/album_id",
+            "label": "相册ID",
+            "type": "text"
+          },
+          {
+            "path": "/attach_info",
+            "label": "附加信息（用于分页）",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_album_media_list"
+      ]
+    },
+    {
+      "action": "get_group_info_ex",
+      "title": "get_group_info_ex",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_info_ex"
+      ]
+    },
+    {
+      "action": "get_group_share_link",
+      "title": "get_group_share_link",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "need_short_url": {
+            "type": "string",
+            "description": "是否返回短链 (qm.qq.com/q/xxx)，false 返回完整 universal-share 链接"
+          },
+          "src_id": {
+            "type": "string",
+            "description": "分享来源 ID"
+          },
+          "additional_param": {
+            "type": "string",
+            "description": "附加参数"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/need_short_url",
+            "label": "是否返回短链 (qm.qq.com/q/xxx)，false 返回完整 universal-share 链接",
+            "type": "text"
+          },
+          {
+            "path": "/src_id",
+            "label": "分享来源 ID",
+            "type": "text"
+          },
+          {
+            "path": "/additional_param",
+            "label": "附加参数",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_share_link"
+      ]
+    },
+    {
+      "action": "get_group_signed_list",
+      "title": "get_group_signed_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_signed_list"
+      ]
+    },
+    {
+      "action": "get_profile_like",
+      "title": "get_profile_like",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "QQ号"
+          },
+          "start": {
+            "type": "string",
+            "description": "起始位置"
+          },
+          "count": {
+            "type": "string",
+            "description": "获取数量"
+          }
+        },
+        "required": [
+          "start",
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "QQ号",
+            "type": "text"
+          },
+          {
+            "path": "/start",
+            "label": "起始位置",
+            "type": "text"
+          },
+          {
+            "path": "/count",
+            "label": "获取数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_profile_like"
+      ]
+    },
+    {
+      "action": "get_qun_album_list",
+      "title": "get_qun_album_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "attach_info": {
+            "type": "string",
+            "description": "附加信息（用于分页，从上一次返回结果中获取）"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/attach_info",
+            "label": "附加信息（用于分页，从上一次返回结果中获取）",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_qun_album_list"
+      ]
+    },
+    {
+      "action": "nc_get_rkey",
+      "title": "nc_get_rkey",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:nc_get_rkey"
+      ]
+    },
+    {
+      "action": "get_robot_uin_range",
+      "title": "get_robot_uin_range",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_robot_uin_range"
+      ]
+    },
+    {
+      "action": "get_unidirectional_friend_list",
+      "title": "get_unidirectional_friend_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_unidirectional_friend_list"
+      ]
+    },
+    {
+      "action": "nc_get_user_status",
+      "title": "nc_get_user_status",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "QQ号"
+          }
+        },
+        "required": [
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "QQ号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:nc_get_user_status"
+      ]
+    },
+    {
+      "action": "move_group_file",
+      "title": "move_group_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件ID"
+          },
+          "current_parent_directory": {
+            "type": "string",
+            "description": "当前父目录"
+          },
+          "target_parent_directory": {
+            "type": "string",
+            "description": "目标父目录"
+          }
+        },
+        "required": [
+          "group_id",
+          "file_id",
+          "current_parent_directory",
+          "target_parent_directory"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件ID",
+            "type": "text"
+          },
+          {
+            "path": "/current_parent_directory",
+            "label": "当前父目录",
+            "type": "text"
+          },
+          {
+            "path": "/target_parent_directory",
+            "label": "目标父目录",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:move_group_file"
+      ]
+    },
+    {
+      "action": "ocr_image",
+      "title": "ocr_image",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string",
+            "description": "图片路径、URL或Base64"
+          }
+        },
+        "required": [
+          "image"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/image",
+            "label": "图片路径、URL或Base64",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:ocr_image"
+      ]
+    },
+    {
+      "action": "rename_group_file",
+      "title": "rename_group_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件ID"
+          },
+          "current_parent_directory": {
+            "type": "string",
+            "description": "当前父目录"
+          },
+          "new_name": {
+            "type": "string",
+            "description": "新文件名"
+          }
+        },
+        "required": [
+          "group_id",
+          "file_id",
+          "current_parent_directory",
+          "new_name"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件ID",
+            "type": "text"
+          },
+          {
+            "path": "/current_parent_directory",
+            "label": "当前父目录",
+            "type": "text"
+          },
+          {
+            "path": "/new_name",
+            "label": "新文件名",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:rename_group_file"
+      ]
+    },
+    {
+      "action": "send_packet",
+      "title": "send_packet",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cmd": {
+            "type": "string",
+            "description": "命令字"
+          },
+          "data": {
+            "type": "string",
+            "description": "十六进制数据"
+          },
+          "rsp": {
+            "type": "string",
+            "description": "是否等待响应"
+          }
+        },
+        "required": [
+          "cmd",
+          "data",
+          "rsp"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/cmd",
+            "label": "命令字",
+            "type": "text"
+          },
+          {
+            "path": "/data",
+            "label": "十六进制数据",
+            "type": "text"
+          },
+          {
+            "path": "/rsp",
+            "label": "是否等待响应",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_packet"
+      ]
+    },
+    {
+      "action": "send_qzone_msg",
+      "title": "send_qzone_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "说说正文"
+          },
+          "images": {
+            "type": "string",
+            "description": "图片数组, 支持 file:// http(s):// base64:// , 自动上传"
+          },
+          "ugc_right": {
+            "type": "string",
+            "description": "查看权限: 1所有人可见 4好友可见 16部分好友可见 64仅自己可见 128部分好友不可见"
+          },
+          "target_uins": {
+            "type": "string",
+            "description": "ugc_right为16/128时, 权限作用的QQ号数组"
+          }
+        },
+        "required": [
+          "content"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/content",
+            "label": "说说正文",
+            "type": "text"
+          },
+          {
+            "path": "/images",
+            "label": "图片数组, 支持 file:// http(s):// base64:// , 自动上传",
+            "type": "text"
+          },
+          {
+            "path": "/ugc_right",
+            "label": "查看权限: 1所有人可见 4好友可见 16部分好友可见 64仅自己可见 128部分好友不可见",
+            "type": "text"
+          },
+          {
+            "path": "/target_uins",
+            "label": "ugc_right为16/128时, 权限作用的QQ号数组",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_qzone_msg"
+      ]
+    },
+    {
+      "action": "set_diy_online_status",
+      "title": "set_diy_online_status",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "face_id": {
+            "type": "string",
+            "description": "图标ID"
+          },
+          "wording": {
+            "type": "string",
+            "description": "状态文字内容"
+          }
+        },
+        "required": [
+          "face_id",
+          "wording"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/face_id",
+            "label": "图标ID",
+            "type": "text"
+          },
+          {
+            "path": "/wording",
+            "label": "状态文字内容",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_diy_online_status"
+      ]
+    },
+    {
+      "action": "set_group_add_option",
+      "title": "set_group_add_option",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "add_type": {
+            "type": "number",
+            "description": "加群方式"
+          },
+          "group_question": {
+            "type": "string",
+            "description": "加群问题"
+          },
+          "group_answer": {
+            "type": "string",
+            "description": "加群答案"
+          }
+        },
+        "required": [
+          "group_id",
+          "add_type"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/add_type",
+            "label": "加群方式",
+            "type": "number"
+          },
+          {
+            "path": "/group_question",
+            "label": "加群问题",
+            "type": "text"
+          },
+          {
+            "path": "/group_answer",
+            "label": "加群答案",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_add_option"
+      ]
+    },
+    {
+      "action": "set_group_album_media_like",
+      "title": "set_group_album_media_like",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "album_id": {
+            "type": "string",
+            "description": "相册ID"
+          },
+          "batch_id": {
+            "type": "string",
+            "description": "batch_id"
+          },
+          "lloc": {
+            "type": "string",
+            "description": "lloc，若对整个上传操作则不填"
+          }
+        },
+        "required": [
+          "group_id",
+          "album_id",
+          "batch_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/album_id",
+            "label": "相册ID",
+            "type": "text"
+          },
+          {
+            "path": "/batch_id",
+            "label": "batch_id",
+            "type": "text"
+          },
+          {
+            "path": "/lloc",
+            "label": "lloc，若对整个上传操作则不填",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_album_media_like"
+      ]
+    },
+    {
+      "action": "set_group_kick_members",
+      "title": "set_group_kick_members",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "QQ号列表"
+          },
+          "reject_add_request": {
+            "type": "string",
+            "description": "是否拒绝加群请求"
+          }
+        },
+        "required": [
+          "group_id",
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "QQ号列表",
+            "type": "text"
+          },
+          {
+            "path": "/reject_add_request",
+            "label": "是否拒绝加群请求",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_kick_members"
+      ]
+    },
+    {
+      "action": "set_group_remark",
+      "title": "set_group_remark",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "remark": {
+            "type": "string",
+            "description": "备注"
+          }
+        },
+        "required": [
+          "group_id",
+          "remark"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/remark",
+            "label": "备注",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_remark"
+      ]
+    },
+    {
+      "action": "set_group_robot_add_option",
+      "title": "set_group_robot_add_option",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "robot_member_switch": {
+            "type": "number",
+            "description": "机器人成员开关"
+          },
+          "robot_member_examine": {
+            "type": "number",
+            "description": "机器人成员审核"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/robot_member_switch",
+            "label": "机器人成员开关",
+            "type": "number"
+          },
+          {
+            "path": "/robot_member_examine",
+            "label": "机器人成员审核",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_robot_add_option"
+      ]
+    },
+    {
+      "action": "set_group_search",
+      "title": "set_group_search",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "no_code_finger_open": {
+            "type": "number",
+            "description": "未知"
+          },
+          "no_finger_open": {
+            "type": "number",
+            "description": "未知"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/no_code_finger_open",
+            "label": "未知",
+            "type": "number"
+          },
+          {
+            "path": "/no_finger_open",
+            "label": "未知",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_search"
+      ]
+    },
+    {
+      "action": "set_group_sign",
+      "title": "set_group_sign",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_sign"
+      ]
+    },
+    {
+      "action": "set_input_status",
+      "title": "set_input_status",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "QQ号"
+          },
+          "event_type": {
+            "type": "number",
+            "description": "事件类型"
+          }
+        },
+        "required": [
+          "user_id",
+          "event_type"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "QQ号",
+            "type": "text"
+          },
+          {
+            "path": "/event_type",
+            "label": "事件类型",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_input_status"
+      ]
+    },
+    {
+      "action": "set_self_longnick",
+      "title": "set_self_longnick",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "longNick": {
+            "type": "string",
+            "description": "签名内容"
+          }
+        },
+        "required": [
+          "longNick"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/longNick",
+            "label": "签名内容",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_self_longnick"
+      ]
+    },
+    {
+      "action": "set_online_status",
+      "title": "set_online_status",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "在线状态"
+          },
+          "ext_status": {
+            "type": "string",
+            "description": "扩展状态"
+          },
+          "battery_status": {
+            "type": "string",
+            "description": "电量状态"
+          }
+        },
+        "required": [
+          "status",
+          "ext_status",
+          "battery_status"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/status",
+            "label": "在线状态",
+            "type": "text"
+          },
+          {
+            "path": "/ext_status",
+            "label": "扩展状态",
+            "type": "text"
+          },
+          {
+            "path": "/battery_status",
+            "label": "电量状态",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_online_status"
+      ]
+    },
+    {
+      "action": "set_qq_avatar",
+      "title": "set_qq_avatar",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "图片路径、URL或Base64"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file",
+            "label": "图片路径、URL或Base64",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_qq_avatar"
+      ]
+    },
+    {
+      "action": "set_group_special_title",
+      "title": "set_group_special_title",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "QQ号"
+          },
+          "special_title": {
+            "type": "string",
+            "description": "专属头衔"
+          }
+        },
+        "required": [
+          "group_id",
+          "user_id",
+          "special_title"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "QQ号",
+            "type": "text"
+          },
+          {
+            "path": "/special_title",
+            "label": "专属头衔",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_special_title"
+      ]
+    },
+    {
+      "action": "ArkSharePeer",
+      "title": "ArkSharePeer",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "QQ号"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "phone_number": {
+            "type": "string",
+            "description": "手机号"
+          }
+        },
+        "required": [
+          "phone_number"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "QQ号",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/phone_number",
+            "label": "手机号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:ArkSharePeer"
+      ]
+    },
+    {
+      "action": "trans_group_file",
+      "title": "trans_group_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件ID"
+          }
+        },
+        "required": [
+          "group_id",
+          "file_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:trans_group_file"
+      ]
+    },
+    {
+      "action": "translate_en2zh",
+      "title": "translate_en2zh",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "words": {
+            "type": "string",
+            "description": "待翻译单词列表"
+          }
+        },
+        "required": [
+          "words"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/words",
+            "label": "待翻译单词列表",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:translate_en2zh"
+      ]
+    },
+    {
+      "action": "upload_image_to_qun_album",
+      "title": "upload_image_to_qun_album",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "album_id": {
+            "type": "string",
+            "description": "相册ID"
+          },
+          "album_name": {
+            "type": "string",
+            "description": "相册名称"
+          },
+          "file": {
+            "type": "string",
+            "description": "图片路径、URL或Base64"
+          }
+        },
+        "required": [
+          "group_id",
+          "album_id",
+          "album_name",
+          "file"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/album_id",
+            "label": "相册ID",
+            "type": "text"
+          },
+          {
+            "path": "/album_name",
+            "label": "相册名称",
+            "type": "text"
+          },
+          {
+            "path": "/file",
+            "label": "图片路径、URL或Base64",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:upload_image_to_qun_album"
+      ]
+    },
+    {
+      "action": "upload_images_to_qun_album",
+      "title": "upload_images_to_qun_album",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "album_id": {
+            "type": "string",
+            "description": "相册ID"
+          },
+          "album_name": {
+            "type": "string",
+            "description": "相册名称"
+          },
+          "files": {
+            "type": "string",
+            "description": "图片路径、URL或Base64 数组，一次上传多张"
+          }
+        },
+        "required": [
+          "group_id",
+          "album_id",
+          "album_name",
+          "files"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/album_id",
+            "label": "相册ID",
+            "type": "text"
+          },
+          {
+            "path": "/album_name",
+            "label": "相册名称",
+            "type": "text"
+          },
+          {
+            "path": "/files",
+            "label": "图片路径、URL或Base64 数组，一次上传多张",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:upload_images_to_qun_album"
+      ]
+    },
+    {
+      "action": "upload_video_to_qun_album",
+      "title": "upload_video_to_qun_album",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "album_id": {
+            "type": "string",
+            "description": "相册ID"
+          },
+          "album_name": {
+            "type": "string",
+            "description": "相册名称"
+          },
+          "file": {
+            "type": "string",
+            "description": "视频路径、URL或Base64"
+          }
+        },
+        "required": [
+          "group_id",
+          "album_id",
+          "album_name",
+          "file"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/album_id",
+            "label": "相册ID",
+            "type": "text"
+          },
+          {
+            "path": "/album_name",
+            "label": "相册名称",
+            "type": "text"
+          },
+          {
+            "path": "/file",
+            "label": "视频路径、URL或Base64",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:upload_video_to_qun_album"
+      ]
+    },
+    {
+      "action": "get_file",
+      "title": "get_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "文件路径、URL或Base64"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件ID"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file",
+            "label": "文件路径、URL或Base64",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_file"
+      ]
+    },
+    {
+      "action": "get_private_file_url",
+      "title": "get_private_file_url",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "string",
+            "description": "文件ID"
+          }
+        },
+        "required": [
+          "file_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file_id",
+            "label": "文件ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_private_file_url"
+      ]
+    },
+    {
+      "action": "get_record",
+      "title": "get_record",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "文件路径、URL或Base64"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件ID"
+          },
+          "out_format": {
+            "type": "string",
+            "description": "输出格式"
+          }
+        },
+        "required": [
+          "out_format"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file",
+            "label": "文件路径、URL或Base64",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件ID",
+            "type": "text"
+          },
+          {
+            "path": "/out_format",
+            "label": "输出格式",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_record"
+      ]
+    },
+    {
+      "action": "create_flash_task",
+      "title": "create_flash_task",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "string",
+            "description": "文件列表或单个文件路径"
+          },
+          "name": {
+            "type": "string",
+            "description": "任务名称"
+          },
+          "thumb_path": {
+            "type": "string",
+            "description": "缩略图路径"
+          },
+          "validitySeconds": {
+            "type": "number",
+            "description": "文件集有效期（秒），可选 14 天 1209600 / 90 天 7776000 / 180 天 15552000，默认 1209600"
+          }
+        },
+        "required": [
+          "files"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/files",
+            "label": "文件列表或单个文件路径",
+            "type": "text"
+          },
+          {
+            "path": "/name",
+            "label": "任务名称",
+            "type": "text"
+          },
+          {
+            "path": "/thumb_path",
+            "label": "缩略图路径",
+            "type": "text"
+          },
+          {
+            "path": "/validitySeconds",
+            "label": "文件集有效期（秒），可选 14 天 1209600 / 90 天 7776000 / 180 天 15552000，默认 1209600",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:create_flash_task"
+      ]
+    },
+    {
+      "action": "download_fileset",
+      "title": "download_fileset",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileset_id": {
+            "type": "string",
+            "description": "文件集 ID"
+          }
+        },
+        "required": [
+          "fileset_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/fileset_id",
+            "label": "文件集 ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:download_fileset"
+      ]
+    },
+    {
+      "action": "get_fileset_id",
+      "title": "get_fileset_id",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "share_code": {
+            "type": "string",
+            "description": "分享码或分享链接"
+          }
+        },
+        "required": [
+          "share_code"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/share_code",
+            "label": "分享码或分享链接",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_fileset_id"
+      ]
+    },
+    {
+      "action": "get_fileset_info",
+      "title": "get_fileset_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileset_id": {
+            "type": "string",
+            "description": "文件集 ID"
+          }
+        },
+        "required": [
+          "fileset_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/fileset_id",
+            "label": "文件集 ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_fileset_info"
+      ]
+    },
+    {
+      "action": "get_flash_file_list",
+      "title": "get_flash_file_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileset_id": {
+            "type": "string",
+            "description": "文件集 ID"
+          }
+        },
+        "required": [
+          "fileset_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/fileset_id",
+            "label": "文件集 ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_flash_file_list"
+      ]
+    },
+    {
+      "action": "get_flash_file_url",
+      "title": "get_flash_file_url",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileset_id": {
+            "type": "string",
+            "description": "文件集 ID"
+          },
+          "file_name": {
+            "type": "string",
+            "description": "文件名"
+          },
+          "file_index": {
+            "type": "number",
+            "description": "文件索引"
+          }
+        },
+        "required": [
+          "fileset_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/fileset_id",
+            "label": "文件集 ID",
+            "type": "text"
+          },
+          {
+            "path": "/file_name",
+            "label": "文件名",
+            "type": "text"
+          },
+          {
+            "path": "/file_index",
+            "label": "文件索引",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_flash_file_url"
+      ]
+    },
+    {
+      "action": "get_share_link",
+      "title": "get_share_link",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileset_id": {
+            "type": "string",
+            "description": "文件集 ID"
+          }
+        },
+        "required": [
+          "fileset_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/fileset_id",
+            "label": "文件集 ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_share_link"
+      ]
+    },
+    {
+      "action": "send_flash_msg",
+      "title": "send_flash_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileset_id": {
+            "type": "string",
+            "description": "文件集 ID"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "fileset_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/fileset_id",
+            "label": "文件集 ID",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_flash_msg"
+      ]
+    },
+    {
+      "action": "cancel_online_file",
+      "title": "cancel_online_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          },
+          "msg_id": {
+            "type": "string",
+            "description": "消息 ID"
+          }
+        },
+        "required": [
+          "user_id",
+          "msg_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          },
+          {
+            "path": "/msg_id",
+            "label": "消息 ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:cancel_online_file"
+      ]
+    },
+    {
+      "action": "get_online_file_msg",
+      "title": "get_online_file_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          }
+        },
+        "required": [
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_online_file_msg"
+      ]
+    },
+    {
+      "action": "receive_online_file",
+      "title": "receive_online_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          },
+          "msg_id": {
+            "type": "string",
+            "description": "消息 ID"
+          },
+          "element_id": {
+            "type": "string",
+            "description": "元素 ID"
+          }
+        },
+        "required": [
+          "user_id",
+          "msg_id",
+          "element_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          },
+          {
+            "path": "/msg_id",
+            "label": "消息 ID",
+            "type": "text"
+          },
+          {
+            "path": "/element_id",
+            "label": "元素 ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:receive_online_file"
+      ]
+    },
+    {
+      "action": "refuse_online_file",
+      "title": "refuse_online_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          },
+          "msg_id": {
+            "type": "string",
+            "description": "消息 ID"
+          },
+          "element_id": {
+            "type": "string",
+            "description": "元素 ID"
+          }
+        },
+        "required": [
+          "user_id",
+          "msg_id",
+          "element_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          },
+          {
+            "path": "/msg_id",
+            "label": "消息 ID",
+            "type": "text"
+          },
+          {
+            "path": "/element_id",
+            "label": "元素 ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:refuse_online_file"
+      ]
+    },
+    {
+      "action": "send_online_file",
+      "title": "send_online_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          },
+          "file_path": {
+            "type": "string",
+            "description": "本地文件路径"
+          },
+          "file_name": {
+            "type": "string",
+            "description": "文件名 (可选)"
+          }
+        },
+        "required": [
+          "user_id",
+          "file_path"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          },
+          {
+            "path": "/file_path",
+            "label": "本地文件路径",
+            "type": "text"
+          },
+          {
+            "path": "/file_name",
+            "label": "文件名 (可选)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_online_file"
+      ]
+    },
+    {
+      "action": "send_online_folder",
+      "title": "send_online_folder",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          },
+          "folder_path": {
+            "type": "string",
+            "description": "本地文件夹路径"
+          },
+          "folder_name": {
+            "type": "string",
+            "description": "文件夹名称 (可选)"
+          }
+        },
+        "required": [
+          "user_id",
+          "folder_path"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          },
+          {
+            "path": "/folder_path",
+            "label": "本地文件夹路径",
+            "type": "text"
+          },
+          {
+            "path": "/folder_name",
+            "label": "文件夹名称 (可选)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_online_folder"
+      ]
+    },
+    {
+      "action": "create_group_file_folder",
+      "title": "create_group_file_folder",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:create_group_file_folder"
+      ]
+    },
+    {
+      "action": "delete_group_file",
+      "title": "delete_group_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件ID"
+          }
+        },
+        "required": [
+          "group_id",
+          "file_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:delete_group_file"
+      ]
+    },
+    {
+      "action": "delete_group_folder",
+      "title": "delete_group_folder",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "folder_id": {
+            "type": "string",
+            "description": "文件夹ID"
+          },
+          "folder": {
+            "type": "string",
+            "description": "文件夹ID"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/folder_id",
+            "label": "文件夹ID",
+            "type": "text"
+          },
+          {
+            "path": "/folder",
+            "label": "文件夹ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:delete_group_folder"
+      ]
+    },
+    {
+      "action": "download_file",
+      "title": "download_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "下载链接"
+          },
+          "base64": {
+            "type": "string",
+            "description": "base64数据"
+          },
+          "name": {
+            "type": "string",
+            "description": "文件名"
+          },
+          "headers": {
+            "type": "string",
+            "description": "请求头"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/url",
+            "label": "下载链接",
+            "type": "text"
+          },
+          {
+            "path": "/base64",
+            "label": "base64数据",
+            "type": "text"
+          },
+          {
+            "path": "/name",
+            "label": "文件名",
+            "type": "text"
+          },
+          {
+            "path": "/headers",
+            "label": "请求头",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:download_file"
+      ]
+    },
+    {
+      "action": "get_forward_msg",
+      "title": "get_forward_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          },
+          "id": {
+            "type": "string",
+            "description": "消息ID"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          },
+          {
+            "path": "/id",
+            "label": "消息ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_forward_msg"
+      ]
+    },
+    {
+      "action": "get_friend_msg_history",
+      "title": "get_friend_msg_history",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "message_seq": {
+            "type": "string",
+            "description": "起始消息序号"
+          },
+          "count": {
+            "type": "number",
+            "description": "获取消息数量"
+          },
+          "reverse_order": {
+            "type": "boolean",
+            "description": "是否反向排序"
+          },
+          "disable_get_url": {
+            "type": "boolean",
+            "description": "是否禁用获取URL"
+          },
+          "parse_mult_msg": {
+            "type": "boolean",
+            "description": "是否解析合并消息"
+          },
+          "quick_reply": {
+            "type": "boolean",
+            "description": "是否快速回复"
+          },
+          "reverseOrder": {
+            "type": "boolean",
+            "description": "是否反向排序(旧版本兼容)"
+          }
+        },
+        "required": [
+          "user_id",
+          "count",
+          "reverse_order",
+          "disable_get_url",
+          "parse_mult_msg",
+          "quick_reply",
+          "reverseOrder"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/message_seq",
+            "label": "起始消息序号",
+            "type": "text"
+          },
+          {
+            "path": "/count",
+            "label": "获取消息数量",
+            "type": "number"
+          },
+          {
+            "path": "/reverse_order",
+            "label": "是否反向排序",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/disable_get_url",
+            "label": "是否禁用获取URL",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/parse_mult_msg",
+            "label": "是否解析合并消息",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/quick_reply",
+            "label": "是否快速回复",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/reverseOrder",
+            "label": "是否反向排序(旧版本兼容)",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_friend_msg_history"
+      ]
+    },
+    {
+      "action": "get_group_at_all_remain",
+      "title": "get_group_at_all_remain",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_at_all_remain"
+      ]
+    },
+    {
+      "action": "get_group_file_system_info",
+      "title": "get_group_file_system_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_file_system_info"
+      ]
+    },
+    {
+      "action": "get_group_files_by_folder",
+      "title": "get_group_files_by_folder",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "folder_id": {
+            "type": "string",
+            "description": "文件夹ID"
+          },
+          "folder": {
+            "type": "string",
+            "description": "文件夹ID"
+          },
+          "file_count": {
+            "type": "string",
+            "description": "文件数量"
+          }
+        },
+        "required": [
+          "group_id",
+          "file_count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/folder_id",
+            "label": "文件夹ID",
+            "type": "text"
+          },
+          {
+            "path": "/folder",
+            "label": "文件夹ID",
+            "type": "text"
+          },
+          {
+            "path": "/file_count",
+            "label": "文件数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_files_by_folder"
+      ]
+    },
+    {
+      "action": "get_group_honor_info",
+      "title": "get_group_honor_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "type": {
+            "description": "荣誉类型"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/type",
+            "label": "荣誉类型",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_honor_info"
+      ]
+    },
+    {
+      "action": "get_group_msg_history",
+      "title": "get_group_msg_history",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "message_seq": {
+            "type": "string",
+            "description": "起始消息序号"
+          },
+          "count": {
+            "type": "number",
+            "description": "获取消息数量"
+          },
+          "reverse_order": {
+            "type": "boolean",
+            "description": "是否反向排序"
+          },
+          "disable_get_url": {
+            "type": "boolean",
+            "description": "是否禁用获取URL"
+          },
+          "parse_mult_msg": {
+            "type": "boolean",
+            "description": "是否解析合并消息"
+          },
+          "quick_reply": {
+            "type": "boolean",
+            "description": "是否快速回复"
+          },
+          "reverseOrder": {
+            "type": "boolean",
+            "description": "是否反向排序(旧版本兼容)"
+          }
+        },
+        "required": [
+          "group_id",
+          "count",
+          "reverse_order",
+          "disable_get_url",
+          "parse_mult_msg",
+          "quick_reply",
+          "reverseOrder"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/message_seq",
+            "label": "起始消息序号",
+            "type": "text"
+          },
+          {
+            "path": "/count",
+            "label": "获取消息数量",
+            "type": "number"
+          },
+          {
+            "path": "/reverse_order",
+            "label": "是否反向排序",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/disable_get_url",
+            "label": "是否禁用获取URL",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/parse_mult_msg",
+            "label": "是否解析合并消息",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/quick_reply",
+            "label": "是否快速回复",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/reverseOrder",
+            "label": "是否反向排序(旧版本兼容)",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_msg_history"
+      ]
+    },
+    {
+      "action": "get_group_root_files",
+      "title": "get_group_root_files",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "file_count": {
+            "type": "string",
+            "description": "文件数量"
+          }
+        },
+        "required": [
+          "group_id",
+          "file_count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/file_count",
+            "label": "文件数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_root_files"
+      ]
+    },
+    {
+      "action": "get_online_clients",
+      "title": "get_online_clients",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_online_clients"
+      ]
+    },
+    {
+      "action": "get_stranger_info",
+      "title": "get_stranger_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "no_cache": {
+            "type": "string",
+            "description": "是否不使用缓存"
+          }
+        },
+        "required": [
+          "user_id",
+          "no_cache"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/no_cache",
+            "label": "是否不使用缓存",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_stranger_info"
+      ]
+    },
+    {
+      "action": "check_url_safely",
+      "title": "check_url_safely",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "要检查的 URL"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/url",
+            "label": "要检查的 URL",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:check_url_safely"
+      ]
+    },
+    {
+      "action": "_get_model_show",
+      "title": "_get_model_show",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "模型名称"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/model",
+            "label": "模型名称",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:_get_model_show"
+      ]
+    },
+    {
+      "action": "_set_model_show",
+      "title": "_set_model_show",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:_set_model_show"
+      ]
+    },
+    {
+      "action": ".handle_quick_operation",
+      "title": ".handle_quick_operation",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "context": {},
+          "operation": {}
+        },
+        "required": [
+          "context",
+          "operation"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/context",
+            "label": "context",
+            "type": "text"
+          },
+          {
+            "path": "/operation",
+            "label": "operation",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:.handle_quick_operation"
+      ]
+    },
+    {
+      "action": "_send_group_notice",
+      "title": "_send_group_notice",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "content": {
+            "type": "string",
+            "description": "公告内容"
+          },
+          "image": {
+            "type": "string",
+            "description": "公告图片路径或 URL"
+          },
+          "pinned": {
+            "type": "string",
+            "description": "是否置顶 (0/1)"
+          },
+          "type": {
+            "type": "string",
+            "description": "类型 (默认为 1)"
+          },
+          "confirm_required": {
+            "type": "string",
+            "description": "是否需要确认 (0/1)"
+          },
+          "is_show_edit_card": {
+            "type": "string",
+            "description": "是否显示修改群名片引导 (0/1)"
+          },
+          "tip_window_type": {
+            "type": "string",
+            "description": "弹窗类型 (默认为 0)"
+          }
+        },
+        "required": [
+          "group_id",
+          "content",
+          "pinned",
+          "type",
+          "confirm_required",
+          "is_show_edit_card",
+          "tip_window_type"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/content",
+            "label": "公告内容",
+            "type": "text"
+          },
+          {
+            "path": "/image",
+            "label": "公告图片路径或 URL",
+            "type": "text"
+          },
+          {
+            "path": "/pinned",
+            "label": "是否置顶 (0/1)",
+            "type": "text"
+          },
+          {
+            "path": "/type",
+            "label": "类型 (默认为 1)",
+            "type": "text"
+          },
+          {
+            "path": "/confirm_required",
+            "label": "是否需要确认 (0/1)",
+            "type": "text"
+          },
+          {
+            "path": "/is_show_edit_card",
+            "label": "是否显示修改群名片引导 (0/1)",
+            "type": "text"
+          },
+          {
+            "path": "/tip_window_type",
+            "label": "弹窗类型 (默认为 0)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:_send_group_notice"
+      ]
+    },
+    {
+      "action": "set_group_portrait",
+      "title": "set_group_portrait",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "头像文件路径或 URL"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "file",
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file",
+            "label": "头像文件路径或 URL",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_portrait"
+      ]
+    },
+    {
+      "action": "set_qq_profile",
+      "title": "set_qq_profile",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "nickname": {
+            "type": "string",
+            "description": "昵称"
+          },
+          "personal_note": {
+            "type": "string",
+            "description": "个性签名"
+          },
+          "sex": {
+            "type": "string",
+            "description": "性别 (0: 未知, 1: 男, 2: 女)"
+          }
+        },
+        "required": [
+          "nickname"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/nickname",
+            "label": "昵称",
+            "type": "text"
+          },
+          {
+            "path": "/personal_note",
+            "label": "个性签名",
+            "type": "text"
+          },
+          {
+            "path": "/sex",
+            "label": "性别 (0: 未知, 1: 男, 2: 女)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_qq_profile"
+      ]
+    },
+    {
+      "action": "upload_group_file",
+      "title": "upload_group_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "file": {
+            "type": "string",
+            "description": "资源路径或URL"
+          },
+          "name": {
+            "type": "string",
+            "description": "文件名"
+          },
+          "folder": {
+            "type": "string",
+            "description": "父目录 ID"
+          },
+          "folder_id": {
+            "type": "string",
+            "description": "父目录 ID (兼容性字段)"
+          }
+        },
+        "required": [
+          "group_id",
+          "file",
+          "name"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/file",
+            "label": "资源路径或URL",
+            "type": "text"
+          },
+          {
+            "path": "/name",
+            "label": "文件名",
+            "type": "text"
+          },
+          {
+            "path": "/folder",
+            "label": "父目录 ID",
+            "type": "text"
+          },
+          {
+            "path": "/folder_id",
+            "label": "父目录 ID (兼容性字段)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:upload_group_file"
+      ]
+    },
+    {
+      "action": "upload_private_file",
+      "title": "upload_private_file",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户 QQ"
+          },
+          "file": {
+            "type": "string",
+            "description": "资源路径或URL"
+          },
+          "name": {
+            "type": "string",
+            "description": "文件名"
+          },
+          "upload_file": {
+            "type": "boolean",
+            "description": "是否执行上传"
+          }
+        },
+        "required": [
+          "user_id",
+          "file",
+          "name",
+          "upload_file"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户 QQ",
+            "type": "text"
+          },
+          {
+            "path": "/file",
+            "label": "资源路径或URL",
+            "type": "text"
+          },
+          {
+            "path": "/name",
+            "label": "文件名",
+            "type": "text"
+          },
+          {
+            "path": "/upload_file",
+            "label": "是否执行上传",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:upload_private_file"
+      ]
+    },
+    {
+      "action": "delete_essence_msg",
+      "title": "delete_essence_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          },
+          "msg_seq": {
+            "type": "string",
+            "description": "消息序号"
+          },
+          "msg_random": {
+            "type": "string",
+            "description": "消息随机数"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          },
+          {
+            "path": "/msg_seq",
+            "label": "消息序号",
+            "type": "text"
+          },
+          {
+            "path": "/msg_random",
+            "label": "消息随机数",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:delete_essence_msg"
+      ]
+    },
+    {
+      "action": "_del_group_notice",
+      "title": "_del_group_notice",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "notice_id": {
+            "type": "string",
+            "description": "公告ID"
+          }
+        },
+        "required": [
+          "group_id",
+          "notice_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/notice_id",
+            "label": "公告ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:_del_group_notice"
+      ]
+    },
+    {
+      "action": "get_ai_record",
+      "title": "get_ai_record",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "character": {
+            "type": "string",
+            "description": "角色ID"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "text": {
+            "type": "string",
+            "description": "语音文本内容"
+          }
+        },
+        "required": [
+          "character",
+          "group_id",
+          "text"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/character",
+            "label": "角色ID",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/text",
+            "label": "语音文本内容",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_ai_record"
+      ]
+    },
+    {
+      "action": "get_group_detail_info",
+      "title": "get_group_detail_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_detail_info"
+      ]
+    },
+    {
+      "action": "get_group_ignored_notifies",
+      "title": "get_group_ignored_notifies",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_ignored_notifies"
+      ]
+    },
+    {
+      "action": "get_group_info",
+      "title": "get_group_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_info"
+      ]
+    },
+    {
+      "action": "get_group_list",
+      "title": "get_group_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "no_cache": {
+            "type": "string",
+            "description": "是否不使用缓存"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/no_cache",
+            "label": "是否不使用缓存",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_list"
+      ]
+    },
+    {
+      "action": "get_group_member_info",
+      "title": "get_group_member_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "QQ号"
+          },
+          "no_cache": {
+            "type": "string",
+            "description": "是否不使用缓存"
+          }
+        },
+        "required": [
+          "group_id",
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "QQ号",
+            "type": "text"
+          },
+          {
+            "path": "/no_cache",
+            "label": "是否不使用缓存",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_member_info"
+      ]
+    },
+    {
+      "action": "get_group_member_list",
+      "title": "get_group_member_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "no_cache": {
+            "type": "string",
+            "description": "是否不使用缓存"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/no_cache",
+            "label": "是否不使用缓存",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_member_list"
+      ]
+    },
+    {
+      "action": "_get_group_notice",
+      "title": "_get_group_notice",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:_get_group_notice"
+      ]
+    },
+    {
+      "action": "get_group_shut_list",
+      "title": "get_group_shut_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_shut_list"
+      ]
+    },
+    {
+      "action": "send_group_ai_record",
+      "title": "send_group_ai_record",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "character": {
+            "type": "string",
+            "description": "角色ID"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "text": {
+            "type": "string",
+            "description": "语音文本内容"
+          }
+        },
+        "required": [
+          "character",
+          "group_id",
+          "text"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/character",
+            "label": "角色ID",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/text",
+            "label": "语音文本内容",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_group_ai_record"
+      ]
+    },
+    {
+      "action": "set_essence_msg",
+      "title": "set_essence_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          }
+        },
+        "required": [
+          "message_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_essence_msg"
+      ]
+    },
+    {
+      "action": "set_group_add_request",
+      "title": "set_group_add_request",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "flag": {
+            "type": "string",
+            "description": "请求flag"
+          },
+          "approve": {
+            "type": "string",
+            "description": "是否同意"
+          },
+          "reason": {
+            "type": "string",
+            "description": "拒绝理由"
+          },
+          "count": {
+            "type": "number",
+            "description": "搜索通知数量"
+          }
+        },
+        "required": [
+          "flag"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/flag",
+            "label": "请求flag",
+            "type": "text"
+          },
+          {
+            "path": "/approve",
+            "label": "是否同意",
+            "type": "text"
+          },
+          {
+            "path": "/reason",
+            "label": "拒绝理由",
+            "type": "text"
+          },
+          {
+            "path": "/count",
+            "label": "搜索通知数量",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_add_request"
+      ]
+    },
+    {
+      "action": "set_group_admin",
+      "title": "set_group_admin",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "enable": {
+            "type": "string",
+            "description": "是否设置为管理员"
+          }
+        },
+        "required": [
+          "group_id",
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/enable",
+            "label": "是否设置为管理员",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_admin"
+      ]
+    },
+    {
+      "action": "set_group_ban",
+      "title": "set_group_ban",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "duration": {
+            "type": "string",
+            "description": "禁言时长(秒)"
+          }
+        },
+        "required": [
+          "group_id",
+          "user_id",
+          "duration"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/duration",
+            "label": "禁言时长(秒)",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_ban"
+      ]
+    },
+    {
+      "action": "set_group_card",
+      "title": "set_group_card",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "card": {
+            "type": "string",
+            "description": "群名片"
+          }
+        },
+        "required": [
+          "group_id",
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/card",
+            "label": "群名片",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_card"
+      ]
+    },
+    {
+      "action": "set_group_kick",
+      "title": "set_group_kick",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "reject_add_request": {
+            "type": "string",
+            "description": "是否拒绝加群请求"
+          }
+        },
+        "required": [
+          "group_id",
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/reject_add_request",
+            "label": "是否拒绝加群请求",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_kick"
+      ]
+    },
+    {
+      "action": "set_group_leave",
+      "title": "set_group_leave",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "is_dismiss": {
+            "type": "string",
+            "description": "是否解散"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/is_dismiss",
+            "label": "是否解散",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_leave"
+      ]
+    },
+    {
+      "action": "set_group_member_invite_policy",
+      "title": "set_group_member_invite_policy",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "policy": {}
+        },
+        "required": [
+          "group_id",
+          "policy"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/policy",
+            "label": "policy",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_member_invite_policy"
+      ]
+    },
+    {
+      "action": "set_group_member_permissions",
+      "title": "set_group_member_permissions",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "allow_member_upload_album": {
+            "type": "boolean",
+            "description": "允许成员上传群相册"
+          },
+          "allow_member_temporary_session": {
+            "type": "boolean",
+            "description": "允许成员发起临时会话"
+          },
+          "allow_member_create_group": {
+            "type": "boolean",
+            "description": "允许成员发起新的群聊"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/allow_member_upload_album",
+            "label": "允许成员上传群相册",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/allow_member_temporary_session",
+            "label": "允许成员发起临时会话",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/allow_member_create_group",
+            "label": "允许成员发起新的群聊",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_member_permissions"
+      ]
+    },
+    {
+      "action": "set_group_name",
+      "title": "set_group_name",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "group_name": {
+            "type": "string",
+            "description": "群名称"
+          }
+        },
+        "required": [
+          "group_id",
+          "group_name"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/group_name",
+            "label": "群名称",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_name"
+      ]
+    },
+    {
+      "action": "set_group_new_member_history_visibility",
+      "title": "set_group_new_member_history_visibility",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "visible": {
+            "type": "boolean",
+            "description": "新成员默认可见最近聊天记录"
+          }
+        },
+        "required": [
+          "group_id",
+          "visible"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/visible",
+            "label": "新成员默认可见最近聊天记录",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_new_member_history_visibility"
+      ]
+    },
+    {
+      "action": "set_group_whole_ban",
+      "title": "set_group_whole_ban",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "enable": {
+            "type": "string",
+            "description": "是否开启全员禁言"
+          }
+        },
+        "required": [
+          "group_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/enable",
+            "label": "是否开启全员禁言",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_group_whole_ban"
+      ]
+    },
+    {
+      "action": "get_guild_list",
+      "title": "get_guild_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_guild_list"
+      ]
+    },
+    {
+      "action": "get_guild_service_profile",
+      "title": "get_guild_service_profile",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_guild_service_profile"
+      ]
+    },
+    {
+      "action": "delete_msg",
+      "title": "delete_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          }
+        },
+        "required": [
+          "message_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:delete_msg"
+      ]
+    },
+    {
+      "action": "fetch_ptt_text",
+      "title": "fetch_ptt_text",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          }
+        },
+        "required": [
+          "message_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:fetch_ptt_text"
+      ]
+    },
+    {
+      "action": "forward_friend_single_msg",
+      "title": "forward_friend_single_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "目标群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "目标用户QQ"
+          }
+        },
+        "required": [
+          "message_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "目标群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "目标用户QQ",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:forward_friend_single_msg"
+      ]
+    },
+    {
+      "action": "get_msg",
+      "title": "get_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          }
+        },
+        "required": [
+          "message_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_msg"
+      ]
+    },
+    {
+      "action": "mark_private_msg_as_read",
+      "title": "mark_private_msg_as_read",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:mark_private_msg_as_read"
+      ]
+    },
+    {
+      "action": "send_msg",
+      "title": "send_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_type": {
+            "type": "string",
+            "description": "消息类型 (private/group)",
+            "enum": [
+              "private",
+              "group"
+            ]
+          },
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "message": {},
+          "auto_escape": {
+            "type": "string",
+            "description": "是否作为纯文本发送"
+          },
+          "news": {
+            "type": "string",
+            "description": "合并转发新闻"
+          },
+          "summary": {
+            "type": "string",
+            "description": "合并转发摘要"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "合并转发提示"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "自定义发送超时(毫秒)，覆盖自动计算值"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_type",
+            "label": "消息类型 (private/group)",
+            "type": "select",
+            "options": [
+              "private",
+              "group"
+            ]
+          },
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/message",
+            "label": "message",
+            "type": "text"
+          },
+          {
+            "path": "/auto_escape",
+            "label": "是否作为纯文本发送",
+            "type": "text"
+          },
+          {
+            "path": "/news",
+            "label": "合并转发新闻",
+            "type": "text"
+          },
+          {
+            "path": "/summary",
+            "label": "合并转发摘要",
+            "type": "text"
+          },
+          {
+            "path": "/prompt",
+            "label": "合并转发提示",
+            "type": "text"
+          },
+          {
+            "path": "/timeout",
+            "label": "自定义发送超时(毫秒)，覆盖自动计算值",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_msg"
+      ]
+    },
+    {
+      "action": "set_msg_emoji_like",
+      "title": "set_msg_emoji_like",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "description": "消息ID"
+          },
+          "emoji_id": {
+            "type": "string",
+            "description": "表情ID"
+          },
+          "set": {
+            "type": "string",
+            "description": "是否设置"
+          }
+        },
+        "required": [
+          "message_id",
+          "emoji_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/message_id",
+            "label": "消息ID",
+            "type": "text"
+          },
+          {
+            "path": "/emoji_id",
+            "label": "表情ID",
+            "type": "text"
+          },
+          {
+            "path": "/set",
+            "label": "是否设置",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_msg_emoji_like"
+      ]
+    },
+    {
+      "action": "get_doubt_friends_add_request",
+      "title": "get_doubt_friends_add_request",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "number",
+            "description": "获取数量"
+          }
+        },
+        "required": [
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/count",
+            "label": "获取数量",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_doubt_friends_add_request"
+      ]
+    },
+    {
+      "action": "set_doubt_friends_add_request",
+      "title": "set_doubt_friends_add_request",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "flag": {
+            "type": "string",
+            "description": "请求 flag"
+          }
+        },
+        "required": [
+          "flag"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/flag",
+            "label": "请求 flag",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_doubt_friends_add_request"
+      ]
+    },
+    {
+      "action": "nc_get_packet_status",
+      "title": "nc_get_packet_status",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:nc_get_packet_status"
+      ]
+    },
+    {
+      "action": "get_rkey",
+      "title": "get_rkey",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_rkey"
+      ]
+    },
+    {
+      "action": "get_rkey_server",
+      "title": "get_rkey_server",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_rkey_server"
+      ]
+    },
+    {
+      "action": "send_poke",
+      "title": "send_poke",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string",
+            "description": "群号"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "用户QQ"
+          },
+          "target_id": {
+            "type": "string",
+            "description": "目标QQ"
+          }
+        },
+        "required": [
+          "user_id"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/group_id",
+            "label": "群号",
+            "type": "text"
+          },
+          {
+            "path": "/user_id",
+            "label": "用户QQ",
+            "type": "text"
+          },
+          {
+            "path": "/target_id",
+            "label": "目标QQ",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_poke"
+      ]
+    },
+    {
+      "action": "download_file_image_stream",
+      "title": "download_file_image_stream",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "文件路径或 URL"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件 ID"
+          },
+          "chunk_size": {
+            "type": "number",
+            "description": "分块大小 (字节)"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file",
+            "label": "文件路径或 URL",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件 ID",
+            "type": "text"
+          },
+          {
+            "path": "/chunk_size",
+            "label": "分块大小 (字节)",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:download_file_image_stream"
+      ]
+    },
+    {
+      "action": "download_file_record_stream",
+      "title": "download_file_record_stream",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "文件路径或 URL"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件 ID"
+          },
+          "chunk_size": {
+            "type": "number",
+            "description": "分块大小 (字节)"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file",
+            "label": "文件路径或 URL",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件 ID",
+            "type": "text"
+          },
+          {
+            "path": "/chunk_size",
+            "label": "分块大小 (字节)",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:download_file_record_stream"
+      ]
+    },
+    {
+      "action": "download_file_stream",
+      "title": "download_file_stream",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "文件路径或 URL"
+          },
+          "file_id": {
+            "type": "string",
+            "description": "文件 ID"
+          },
+          "chunk_size": {
+            "type": "number",
+            "description": "分块大小 (字节)"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/file",
+            "label": "文件路径或 URL",
+            "type": "text"
+          },
+          {
+            "path": "/file_id",
+            "label": "文件 ID",
+            "type": "text"
+          },
+          {
+            "path": "/chunk_size",
+            "label": "分块大小 (字节)",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:download_file_stream"
+      ]
+    },
+    {
+      "action": "test_download_stream",
+      "title": "test_download_stream",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "boolean",
+            "description": "是否触发测试错误"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/error",
+            "label": "是否触发测试错误",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:test_download_stream"
+      ]
+    },
+    {
+      "action": "upload_file_stream",
+      "title": "upload_file_stream",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "stream_id": {
+            "type": "string",
+            "description": "流 ID"
+          },
+          "chunk_data": {
+            "type": "string",
+            "description": "分块数据 (Base64)"
+          },
+          "chunk_index": {
+            "type": "number",
+            "description": "分块索引"
+          },
+          "total_chunks": {
+            "type": "number",
+            "description": "总分块数"
+          },
+          "file_size": {
+            "type": "number",
+            "description": "文件总大小"
+          },
+          "expected_sha256": {
+            "type": "string",
+            "description": "期望的 SHA256"
+          },
+          "is_complete": {
+            "type": "boolean",
+            "description": "是否完成"
+          },
+          "filename": {
+            "type": "string",
+            "description": "文件名"
+          },
+          "reset": {
+            "type": "boolean",
+            "description": "是否重置"
+          },
+          "verify_only": {
+            "type": "boolean",
+            "description": "是否仅验证"
+          },
+          "file_retention": {
+            "type": "number",
+            "description": "文件保留时间 (毫秒)"
+          }
+        },
+        "required": [
+          "stream_id",
+          "file_retention"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/stream_id",
+            "label": "流 ID",
+            "type": "text"
+          },
+          {
+            "path": "/chunk_data",
+            "label": "分块数据 (Base64)",
+            "type": "text"
+          },
+          {
+            "path": "/chunk_index",
+            "label": "分块索引",
+            "type": "number"
+          },
+          {
+            "path": "/total_chunks",
+            "label": "总分块数",
+            "type": "number"
+          },
+          {
+            "path": "/file_size",
+            "label": "文件总大小",
+            "type": "number"
+          },
+          {
+            "path": "/expected_sha256",
+            "label": "期望的 SHA256",
+            "type": "text"
+          },
+          {
+            "path": "/is_complete",
+            "label": "是否完成",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/filename",
+            "label": "文件名",
+            "type": "text"
+          },
+          {
+            "path": "/reset",
+            "label": "是否重置",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/verify_only",
+            "label": "是否仅验证",
+            "type": "select",
+            "options": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "path": "/file_retention",
+            "label": "文件保留时间 (毫秒)",
+            "type": "number"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:upload_file_stream"
+      ]
+    },
+    {
+      "action": "can_send_record",
+      "title": "can_send_record",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:can_send_record"
+      ]
+    },
+    {
+      "action": "clean_cache",
+      "title": "clean_cache",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:clean_cache"
+      ]
+    },
+    {
+      "action": "get_csrf_token",
+      "title": "get_csrf_token",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_csrf_token"
+      ]
+    },
+    {
+      "action": "get_credentials",
+      "title": "get_credentials",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "description": "需要获取 cookies 的域名"
+          }
+        },
+        "required": [
+          "domain"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/domain",
+            "label": "需要获取 cookies 的域名",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_credentials"
+      ]
+    },
+    {
+      "action": "get_login_info",
+      "title": "get_login_info",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_login_info"
+      ]
+    },
+    {
+      "action": "get_status",
+      "title": "get_status",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:get_status"
+      ]
+    },
+    {
+      "action": "get_group_system_msg",
+      "title": "get_group_system_msg",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "string",
+            "description": "获取的消息数量"
+          }
+        },
+        "required": [
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/count",
+            "label": "获取的消息数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_group_system_msg"
+      ]
+    },
+    {
+      "action": "set_restart",
+      "title": "set_restart",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": []
+      },
+      "requiredCapabilities": [
+        "qq:action:set_restart"
+      ]
+    },
+    {
+      "action": "get_cookies",
+      "title": "get_cookies",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "description": "需要获取 cookies 的域名"
+          }
+        },
+        "required": [
+          "domain"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/domain",
+            "label": "需要获取 cookies 的域名",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_cookies"
+      ]
+    },
+    {
+      "action": "get_friend_list",
+      "title": "get_friend_list",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "no_cache": {
+            "type": "string",
+            "description": "是否不使用缓存"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/no_cache",
+            "label": "是否不使用缓存",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_friend_list"
+      ]
+    },
+    {
+      "action": "get_recent_contact",
+      "title": "get_recent_contact",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "string",
+            "description": "获取的数量"
+          }
+        },
+        "required": [
+          "count"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/count",
+            "label": "获取的数量",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:get_recent_contact"
+      ]
+    },
+    {
+      "action": "send_like",
+      "title": "send_like",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "对方 QQ 号"
+          },
+          "times": {
+            "type": "string",
+            "description": "点赞次数"
+          }
+        },
+        "required": [
+          "user_id",
+          "times"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "对方 QQ 号",
+            "type": "text"
+          },
+          {
+            "path": "/times",
+            "label": "点赞次数",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:send_like"
+      ]
+    },
+    {
+      "action": "set_friend_add_request",
+      "title": "set_friend_add_request",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "flag": {
+            "type": "string",
+            "description": "加好友请求的 flag (需从上报中获取)"
+          },
+          "approve": {
+            "type": "string",
+            "description": "是否同意请求"
+          },
+          "remark": {
+            "type": "string",
+            "description": "添加后的好友备注"
+          }
+        },
+        "required": [
+          "flag"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/flag",
+            "label": "加好友请求的 flag (需从上报中获取)",
+            "type": "text"
+          },
+          {
+            "path": "/approve",
+            "label": "是否同意请求",
+            "type": "text"
+          },
+          {
+            "path": "/remark",
+            "label": "添加后的好友备注",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_friend_add_request"
+      ]
+    },
+    {
+      "action": "set_friend_remark",
+      "title": "set_friend_remark",
+      "source": "typebox",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "对方 QQ 号"
+          },
+          "remark": {
+            "type": "string",
+            "description": "备注内容"
+          }
+        },
+        "required": [
+          "user_id",
+          "remark"
+        ],
+        "additionalProperties": true
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "ui": {
+        "fields": [
+          {
+            "path": "/user_id",
+            "label": "对方 QQ 号",
+            "type": "text"
+          },
+          {
+            "path": "/remark",
+            "label": "备注内容",
+            "type": "text"
+          }
+        ]
+      },
+      "requiredCapabilities": [
+        "qq:action:set_friend_remark"
+      ]
+    }
+  ]
+}
